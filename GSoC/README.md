@@ -17,7 +17,7 @@ Prospective contributors must submit their project proposals through the officia
 
 The submission must include:
 1. A CV with contact information.
-2. A project proposal document following the required structure. Check the structure template [here](https://github.com/fraunhoferportugal/tsfel-admin/blob/main/GSoC/application/application-template.md)!
+2. A project proposal document following the required structure.❗Check the structure template [here](https://github.com/fraunhoferportugal/tsfel-admin/blob/main/GSoC/application/application-template.md)❗
 
 The project proposal document must:
 - Be submitted as a single PDF file.
