@@ -19,7 +19,7 @@ The submission must include:
 1. A CV with contact information.
 2. A project proposal document following the required structure. Check the structure template [here](https://github.com/fraunhoferportugal/tsfel-admin/blob/main/GSoC/application/application-template.md)!
 
-The proposal document must:
+The project proposal document must:
 - Be submitted as a single PDF file.
 - Use standard body text with a 10pt or 12pt font size, and appropriately scaled headings.
 - Follow a clean, professional layout (margins, spacing, and sectioning should prioritize readability).
