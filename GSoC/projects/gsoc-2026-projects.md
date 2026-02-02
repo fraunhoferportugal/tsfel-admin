@@ -70,9 +70,9 @@ Duarte Folgado ([@dmfolgado](https://github.com/dmfolgado))
 
 This project aims to extend `TSFEL` with a new feature domain dedicated to query-based (reference-based) feature extraction, enabling the computation of features that explicitly compare an input time-series window with a user-provided reference (query) signal.
 
-`TSFEL` currently provides a large collection of hand-crafted features implemented as individual feature functions in the tsfel.feature_extraction, each annotated with decorators that associate the function with a specific feature domain (temporal, statistical, spectral, or fractal).
+`TSFEL` currently provides a large collection of hand-crafted features implemented as individual feature functions in the `tsfel.feature_extraction`, each annotated with decorators that associate the function with a specific feature domain (temporal, statistical, spectral, or fractal).
 
-The main objective of this project is to introduce a new feature domain, **query** (or reference), where features are computed by comparing the input window to a given query signal. These features may include distance measures, similarity scores, alignment costs, correlation-based metrics, and other comparison-based descriptors.
+The main objective of this project is to introduce a new feature domain, **query**, where features are computed by comparing the input window to a given query signal. These features may include distance measures, similarity scores, alignment costs, correlation-based metrics, and other comparison-based descriptors.
 
 As a concrete implementation, this project will integrate `TSFEL` with the existing `TSSEARCH` package, which already provides a collection of time-series similarity and search measures. The `TSFEL` feature extraction pipeline will be extended to optionally accept a query signal, and the new query-based feature functions will internally rely on `TSSEARCH` measures to compute comparison features between each window and the reference.
 
@@ -92,7 +92,7 @@ Optional (but useful):
 
 ### Expected Outcome(s)
 
-- Introduction of a new `TSFEL` feature domain (e.g., query or reference) implemented consistently with existing feature sets.
+- Introduction of a new `TSFEL` feature domain (query) implemented consistently with existing feature sets.
 - Extension of the `TSFEL` feature extraction API to optionally accept a reference/query time series.
 - Integration of `TSSEARCH` measures as backend operators for query-based feature computation.
 - Documentation and examples showing how to extract classical `TSFEL` features together with query-based features in downstream ML pipelines.
