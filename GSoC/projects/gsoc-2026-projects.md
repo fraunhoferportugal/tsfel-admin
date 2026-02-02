@@ -57,33 +57,49 @@ Optional (but useful):
 3. Yue, Z., Wang, Y., Duan, J., Yang, T., Huang, C., Tong, Y., & Xu, B. (2022, June). TS2Vec: Towards Universal Representation of Time Series. In Proceedings of the AAAI conference on artificial intelligence (Vol. 36, No. 8, pp. 8980-8987).
 
 
-## Project #2: UPDATE TITLE
+## Project #2: Query-Based Feature Extraction – Reference-Aware Time Series Features
 
-TBD
+__Complexity__: Medium
 
-__Complexity__: TBD
-
-__Duration__ TBD
+__Duration__: 350 hours
 
 __Mentors__: Marília Barandas ([@mbarandas](https://github.com/mbarandas)) and 
 Duarte Folgado ([@dmfolgado](https://github.com/dmfolgado))
 
 ### Description
 
-TBD
+This project aims to extend `TSFEL` with a new feature domain dedicated to query-based (reference-based) feature extraction, enabling the computation of features that explicitly compare an input time-series window with a user-provided reference (query) signal.
+
+`TSFEL` currently provides a large collection of hand-crafted features implemented as individual feature functions in the tsfel.feature_extraction, each annotated with decorators that associate the function with a specific feature domain (temporal, statistical, spectral, or fractal).
+
+The main objective of this project is to introduce a new feature domain, **query** (or reference), where features are computed by comparing the input window to a given query signal. These features may include distance measures, similarity scores, alignment costs, correlation-based metrics, and other comparison-based descriptors.
+
+As a concrete implementation, this project will integrate `TSFEL` with the existing `TSSEARCH` package, which already provides a collection of time-series similarity and search measures. The `TSFEL` feature extraction pipeline will be extended to optionally accept a query signal, and the new query-based feature functions will internally rely on `TSSEARCH` measures to compute comparison features between each window and the reference.
+
+By embedding this functionality directly into TSFEL's existing feature extraction mechanism, users will be able to seamlessly combine classical handcrafted features and query-based similarity features in a single, consistent workflow, without maintaining separate pipelines for feature extraction and similarity computation.
+
 
 ### Required Skills
 
-TBD
+- Python 3
+- Git and GitHub
+- Basic understanding of time-series analysis
+- Familiarity with similarity measures and distance metrics for time series
 
-Optional but useful skills:
-
-TBD
+Optional (but useful):
+- Knowledge of time-series alignment methods (e.g., DTW, correlation, elastic distances)
+- Writing clean, testable, open-source code
 
 ### Expected Outcome(s)
 
-TBD
+- Introduction of a new `TSFEL` feature domain (e.g., query or reference) implemented consistently with existing feature sets.
+- Extension of the `TSFEL` feature extraction API to optionally accept a reference/query time series.
+- Integration of `TSSEARCH` measures as backend operators for query-based feature computation.
+- Documentation and examples showing how to extract classical `TSFEL` features together with query-based features in downstream ML pipelines.
+- Basic evaluation demonstrating correctness, stability, and practical runtime compared to the current available feature sets.
 
 ### References
 
 1. Barandas, M., Folgado, D., Fernandes, L., Santos, S., Abreu, M., Bota, P., ... & Gamboa, H. (2020). TSFEL: Time series feature extraction library. SoftwareX, 11, 100456.
+
+2. Folgado, D., Barandas, M., Antunes, M., Nunes, M. L., Liu, H., Hartmann, Y., ... & Gamboa, H. (2022). Tssearch: Time series subsequence search library. SoftwareX, 18, 101049.
